@@ -1,0 +1,418 @@
+/* primary text color #757575 */
+
+/* secondary text color #212121 */
+
+/* accent color #2196F3 */
+
+/* page primary bg color #FFFFFF */
+
+/* page secondary bg color F5F4FA */
+
+/* footer bg color #2F303A */
+
+:root {
+    /* не забагато змінних? */
+    --primary-text-color: #757575;
+    --secondary-text-color: #212121;
+    --accent-color: #2196f3;
+    --page-primary-bgc: #ffffff;
+    --footer-bgc: #2f303a;
+    --page-secondary-bgc: #f5f4fa;
+    --btn-bgc: #f5f4fa;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--primary-text-color);
+}
+
+/* Прибрав крапки у елементів усіх списків */
+.list {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+/* Прибрав оформелення тексу ссилок за замовчуванням */
+.link {
+    text-decoration: none;
+}
+
+/* Приховав заголовки, яких немаж на макеті */
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    border: 1px solid transparent;
+}
+/* СТУДІЯ */
+
+/* header */
+
+/* Змінну --logo-text-color вкладати в .header чи в .logo? */
+.header {
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #ececec;
+    --logo-text-color: #000000;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+.navmenu {
+    display: flex;
+}
+
+.logo {
+    margin-right: 93px;
+
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    color: var(--logo-text-color);
+}
+
+/* Стилізував логотип */
+.logo > span {
+    color: var(--accent-color);
+}
+
+.logo-footer {
+    color: var(--page-primary-bgc);
+}
+
+.navmenu > li:not(:last-child) {
+    margin-right: 50px;
+}
+.navmenu-link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--secondary-text-color);
+}
+
+.contacts {
+    display: flex;
+}
+
+.contacts > li:not(:last-child) {
+    margin-right: 50px;
+}
+
+.contacts-link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+}
+
+.navmenu-link:hover,
+.navmenu-link:focus,
+.contacts-link:hover,
+.contacts-link:focus,
+.footer-link:hover,
+.footer-link:focus {
+    color: var(--accent-color);
+}
+
+/* main - banner */
+
+.banner {
+    background-color: var(--footer-bgc);
+}
+
+.banner-wrap {
+    text-align: center;
+}
+
+.banner-title {
+    margin-bottom: 30px;
+
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--page-primary-bgc);
+}
+
+.banner-button {
+    padding: 10px 32px;
+    min-width: 216px;
+
+    text-align: center;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    color: var(--page-primary-bgc);
+    background-color: var(--accent-color);
+    cursor: pointer;
+    --main-btn-bgc: #188ce8;
+}
+
+.banner-button:hover,
+.banner-button:focus {
+    background-color: var(--main-btn-bgc);
+}
+
+/* main - benefits */
+
+.benefits-list {
+    display: flex;
+}
+
+.benefits-list-content {
+    max-width: 270px;
+}
+
+.benefits-list-content:not(:last-child) {
+    margin-right: 30px;
+}
+
+.benefits-subtitle {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--secondary-text-color);
+}
+
+/* Work */
+
+.work-list {
+    display: flex;
+}
+
+.work-img {
+    max-width: 370px;
+}
+
+.work-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+/* .benefits-text не слилузую, так як всі його властивості явно вказані в body */
+/* .benefits-text { 
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+} */
+
+.title {
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    color: var(--secondary-text-color);
+}
+
+.team {
+    background-color: var(--page-secondary-bgc);
+}
+
+.team-list {
+    display: flex;
+}
+
+.team-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.team-img {
+    margin-bottom: 30px;
+}
+
+.team-subtitle {
+    margin-bottom: 10px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+    color: var(--secondary-text-color);
+}
+
+.team-text {
+    margin-bottom: 30px;
+
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+}
+
+/* Footer */
+
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    background-color: var(--footer-bgc);
+}
+
+.logo-footer {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.footer-link {
+    --footer-link-color: rgba(255, 255, 255, 0.6);
+    color: var(--footer-link-color);
+    letter-spacing: 0.02em;
+    line-height: 1.14;
+    font-style: normal;
+}
+
+.footer-list {
+    padding-left: 0;
+}
+
+.footer-item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.location {
+    /*Стилізував ссиклу геолокації*/
+    color: var(--page-primary-bgc);
+}
+
+/* ПОРТФОЛІО */
+
+/* Хедер аналогічний "Студії" */
+
+.filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.filter > li:not(:last-child) {
+    margin-right: 8px;
+}
+
+.button-filter {
+    padding: 6px 22px;
+
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    background-color: var(--btn-bgc);
+    cursor: pointer;
+}
+
+.button-filter:hover,
+.button-filter:focus {
+    color: var(--page-primary-bgc);
+    background-color: var(--accent-color);
+}
+
+.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project-item {
+    max-width: 370px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.project-item > a {
+    display: inline-block;
+    max-width: inherit;
+}
+
+.project-item:nth-child(3n) {
+    margin-right: 0;
+}
+
+.project-item:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+}
+
+.link > img {
+    margin-bottom: 20px;
+}
+
+.project-subtitle {
+    margin-bottom: 4px;
+    margin-left: 24px;
+    margin-right: 24px;
+    word-wrap: break-word;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--secondary-text-color);
+}
+
+.project-desc {
+    margin-bottom: 20px;
+    margin-left: 24px;
+    margin-right: 24px;
+
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--primary-text-color);
+}
+
+/* Футер аналогічний "Студії" */

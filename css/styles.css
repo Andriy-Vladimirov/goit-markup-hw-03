@@ -19,6 +19,10 @@
     --footer-bgc: #2f303a;
     --page-secondary-bgc: #f5f4fa;
     --btn-bgc: #f5f4fa;
+    --logo-text-color: #000000;
+    --main-btn-bgc: #188ce8;
+    --footer-link-color: rgba(255, 255, 255, 0.6);
+
 }
 
 body {
@@ -89,11 +93,7 @@ p {
 
 /* Змінну --logo-text-color вкладати в .header чи в .logo? */
 .header {
-    padding-top: 25px;
-    padding-bottom: 25px;
-
     border-bottom: 1px solid #ececec;
-    --logo-text-color: #000000;
 }
 
 .header-inner {
@@ -133,8 +133,9 @@ p {
     margin-right: 50px;
 }
 .navmenu-link {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    display: inline-block;
+    padding-top: 32px;
+    padding-bottom: 32px;
 
     font-weight: 500;
     font-size: 14px;
@@ -174,11 +175,20 @@ p {
 /* main - banner */
 
 .banner {
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    text-align: center;
+
     background-color: var(--footer-bgc);
 }
 
 .banner-wrap {
-    text-align: center;
+    padding-right: 0;
+    padding-left: 0;
+    width: 696px;
+
+    
 }
 
 .banner-title {
@@ -194,7 +204,6 @@ p {
 
 .banner-button {
     padding: 10px 32px;
-    min-width: 216px;
 
     text-align: center;
     font-family: inherit;
@@ -205,7 +214,6 @@ p {
     color: var(--page-primary-bgc);
     background-color: var(--accent-color);
     cursor: pointer;
-    --main-btn-bgc: #188ce8;
 }
 
 .banner-button:hover,
@@ -214,6 +222,10 @@ p {
 }
 
 /* main - benefits */
+
+.benefits {
+    padding-bottom: 0;
+}
 
 .benefits-list {
     display: flex;
@@ -244,7 +256,9 @@ p {
 }
 
 .work-img {
-    max-width: 370px;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .work-item:not(:last-child) {
@@ -279,12 +293,18 @@ p {
     display: flex;
 }
 
+.team-item{
+    background-color: #fff;
+}
+
+
 .team-item:not(:last-child) {
     margin-right: 30px;
 }
 
-.team-img {
-    margin-bottom: 30px;
+.team-wrap {
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .team-subtitle {
@@ -298,8 +318,6 @@ p {
 }
 
 .team-text {
-    margin-bottom: 30px;
-
     font-size: 16px;
     line-height: 1.18;
     text-align: center;
@@ -316,11 +334,12 @@ p {
 
 .logo-footer {
     display: inline-block;
+    margin-right: 0;
     margin-bottom: 20px;
 }
 
 .footer-link {
-    --footer-link-color: rgba(255, 255, 255, 0.6);
+    
     color: var(--footer-link-color);
     letter-spacing: 0.02em;
     line-height: 1.14;
@@ -387,7 +406,6 @@ p {
     width: calc((100% - 60px) / 3);
     margin-right: 30px;
     margin-bottom: 30px;
-    border-bottom: 1px solid #eeeeee;
 }
 
 /* .project-item {
@@ -412,15 +430,20 @@ p {
     max-width: inherit;
 }
 
-.link > img {
-    margin-bottom: 20px;
+.project-img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.project-wrap {
+    padding: 20px 24px;
+
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
 }
 
 .project-subtitle {
-    margin-bottom: 4px;
-    margin-left: 24px;
-    margin-right: 24px;
-
     word-wrap: break-word;
     font-weight: 700;
     font-size: 18px;
@@ -431,10 +454,6 @@ p {
 }
 
 .project-desc {
-    margin-bottom: 20px;
-    margin-left: 24px;
-    margin-right: 24px;
-
     font-size: 16px;
     line-height: 1.8;
 
